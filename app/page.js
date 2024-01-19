@@ -1,10 +1,9 @@
-import Image from "next/image";
+import SwipeCard from "@/components/SwipeCard";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome to Seeker</h1>
-      <h2>Seek your dream job here</h2>
+    <div className="flex items-center justify-center h-full">
+      <SwipeCard />
     </div>
   );
 }
