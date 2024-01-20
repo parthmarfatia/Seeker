@@ -1,12 +1,11 @@
 import SwipeCard from "@/components/SwipeCard";
+import {HomeSection} from "./components/home-section";
 import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <>
-      <div className="flex items-center justify-center h-full">
-        <Button variants="primary">
-          <SwipeCard />
-        </Button>
+      <div className=" m-10 h-[700px] p-10">
+        <HomeSection />
       </div>
     </>
   );

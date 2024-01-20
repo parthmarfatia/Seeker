@@ -34,14 +34,20 @@ const Navbar = () => {
         </li>
 
         <li>
-          <Button>
+          <Button variant="outline" size="lg">
+            <Link href="/auth/sign">
             Sign in
+            </Link>
+           
           </Button>
          
         </li>
         <li>
-        <Button variant="outline">
-            Sign in
+        <Button size="lg">
+          <Link href="/auth/signin">
+          Find Job Seeker
+          </Link>
+            
           </Button>
         </li>
       </ul>
