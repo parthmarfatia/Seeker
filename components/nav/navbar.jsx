@@ -32,6 +32,18 @@ const Navbar = () => {
             </Button>
           )}
         </li>
+
+        <li>
+          <Button>
+            Sign in
+          </Button>
+         
+        </li>
+        <li>
+        <Button variant="outline">
+            Sign in
+          </Button>
+        </li>
       </ul>
     </div>
   );
