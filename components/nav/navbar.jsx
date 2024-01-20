@@ -35,7 +35,7 @@ const Navbar = () => {
 
         <li>
           <Button variant="outline" size="lg">
-            <Link href="/auth/sign">
+            <Link href="/auth/signin">
             Sign in
             </Link>
            
