@@ -79,14 +79,14 @@ function SwipePage() {
   }, [lastDirection]);
 
   useEffect(() => {
-    if (count === 2) {
+    if (count === 1) {
       setIsMatched(true);
     }
   }, [count]);
 
   return (
     <div id="swipe-container">
-      {isMatched && (
+      {isMatched ? (
         <div>
           <Alert>
             <PartyPopper className="h-4 w-4" />
@@ -95,8 +95,9 @@ function SwipePage() {
             </AlertTitle>
           </Alert>
         </div>
+      ): (
+        " "
       )}
-      <h1>Welcome to Seeker!</h1>
       <div className="cardContainer">
         {companies.map((character, index) => (
           <TinderCard
