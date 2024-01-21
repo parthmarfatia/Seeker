@@ -1,4 +1,5 @@
 "use client";
+import Markdown from 'react-markdown'
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,7 @@ function SwipePage() {
       Array(companies.length)
         .fill(0)
         .map((i) => React.createRef()),
-    []
+    [companies]
   );
 
   const updateCurrentIndex = (val) => {
@@ -51,12 +52,14 @@ function SwipePage() {
   };
 
   const swipe = async (dir) => {
+    console.log(canSwipe);
     if (canSwipe && currentIndex < companies.length) {
-      await childRefs[currentIndex].current.swipe(dir); // Swipe the card!
+      await childRefs[currentIndex]?.current.swipe(dir); // Swipe the card!
     }
   };
 
   const goBack = async () => {
+    console.log(canGoBack);
     if (!canGoBack) return;
     const newIndex = currentIndex + 1;
     updateCurrentIndex(newIndex);
@@ -73,20 +76,17 @@ function SwipePage() {
   }, []);
 
   useEffect(() => {
-    console.log(lastDirection)
+    console.log(lastDirection);
     if (lastDirection === "right") {
-      
       setCount((prev) => prev + 1);
     }
-    setIsMatched(false)
+    setIsMatched(false);
   }, [lastDirection, currentIndex]);
 
   useEffect(() => {
     if (count === 3) {
       setIsMatched(true);
-     
-    } 
-    
+    }
   }, [count]);
 
   return (
@@ -126,24 +126,13 @@ function SwipePage() {
                       <DialogTitle className="text-center text-[28px] font-bold leading-9 text-zinc-900">
                         Please read the Job Description Carefully
                       </DialogTitle>
-                      <DialogDescription className="p-3 rounded-xl bg-gray-50">
-                        <p className="text-base leading-tight text-center text-gray-800 text-balance">
-                          {character.description}
-                        </p>
+                      <DialogDescription className="p-3 overflow-y-auto rounded-xl bg-gray-50 max-h-[400px]">
+                      <Markdown >
+                        {character.description}
+                      </Markdown>
+                        
                       </DialogDescription>
                     </DialogHeader>
-
-                    <div className="flex items-start self-stretch justify-between gap-4 mt-10 sm:justify-end">
-                      <DialogClose asChild>
-                        <button className="rounded-lg border border-blue-500 px-4 py-2.5 text-center text-sm font-medium leading-tight text-blue-500">
-                          Cancel
-                        </button>
-                      </DialogClose>
-
-                      <button className="rounded-lg bg-blue-500 px-4 py-2.5 text-center text-sm font-medium leading-tight text-white">
-                        Apply
-                      </button>
-                    </div>
                   </DialogContent>
                 </Dialog>
               </div>
