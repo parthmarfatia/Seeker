@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function RootAuthLayout({ children }) {
   return (
-    <div>
+    <div className="h-full">
       <Navbar />
       {children}
     </div>
