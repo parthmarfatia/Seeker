@@ -11,13 +11,9 @@ export const metadata = {
 
 export default function RootAuthLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <header>
-          <Navbar />
-        </header>
-        {children}
-      </body>
-    </html>
+    <div>
+      <Navbar />
+      {children}
+    </div>
   );
 }
