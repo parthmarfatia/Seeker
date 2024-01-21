@@ -1,6 +1,4 @@
-import SwipeCard from "@/components/SwipeCard";
-import {HomeSection} from "./components/home-section";
-import { Button } from "@/components/ui/button";
+import { HomeSection } from "./components/home-section";
 export default function Home() {
   return (
     <>
