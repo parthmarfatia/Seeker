@@ -150,13 +150,13 @@ function SwipePage() {
 
       <div className="flex">
         <div className="space-x-3">
-          <Button variant="destructive" onClick={() => swipe("left")}>
+          <Button variant="destructive" className={`${!canSwipe}`} onClick={() => swipe("left")}>
             Swipe left!
           </Button>
-          <Button variant="outline" onClick={() => goBack()}>
+          <Button variant="outline" className={`${!canGoBack}`} onClick={() => goBack()}>
             Undo swipe!
           </Button>
-          <Button onClick={() => swipe("right")}>Swipe right!</Button>
+          <Button className={`${!canSwipe}`} onClick={() => swipe("right")}>Swipe right!</Button>
         </div>
       </div>
       {lastDirection ? (
