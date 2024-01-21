@@ -35,19 +35,12 @@ const Navbar = () => {
 
         <li>
           <Button variant="outline" size="lg">
-            <Link href="/auth/signin">
-            Sign in
-            </Link>
-           
+            <Link href="/auth/signin">Sign in</Link>
           </Button>
-         
         </li>
         <li>
-        <Button size="lg">
-          <Link href="/auth/signin">
-          Find Job Seeker
-          </Link>
-            
+          <Button size="lg">
+            <Link href="/auth/signin">Find Top Companies</Link>
           </Button>
         </li>
       </ul>
