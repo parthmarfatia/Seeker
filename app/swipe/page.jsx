@@ -141,7 +141,7 @@ function SwipePage() {
         ))}
       </div>
 
-      <div className="flex">
+      {/* <div className="flex">
         <div className="space-x-3">
           <Button
             variant="destructive"
@@ -161,7 +161,7 @@ function SwipePage() {
             Swipe right!
           </Button>
         </div>
-      </div>
+      </div> */}
       {lastDirection ? (
         <h2
           key={lastDirection}
