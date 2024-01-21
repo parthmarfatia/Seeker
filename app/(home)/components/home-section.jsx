@@ -10,7 +10,7 @@ export function HomeSection() {
       <ResizablePanel defaultSize={50}>
         <div className="grid grid-row-2 w-[70%] h-[350px] items-left justify-left p-6">
           <span className="font-extrabold text-6xl ">
-            Hire the best freelancers for any job, online.
+           Bridging Job Seekers with Top Companies
           </span>
           <ul>
             <li className="font-semibold text-xl text-gray-700 dark:text-gray-800">
@@ -25,12 +25,12 @@ export function HomeSection() {
           </ul>
           <div className="space-x-6">
           <Button size="xl">
-            <span className="text-2xl font-semibold"> Hire Job Seeker</span>
+            <span className="text-2xl font-semibold"> Find Top Companies</span>
                
               </Button>
               <Button variant="outline" size="xl">
                 <span className="text-2xl font-semibold">
-                Find a Job
+                Create a Account
                 </span>
                 
               </Button>
