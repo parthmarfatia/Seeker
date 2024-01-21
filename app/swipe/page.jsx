@@ -88,11 +88,13 @@ function SwipePage() {
     <div id="swipe-container">
       {isMatched && (
         <div>
-        <Alert>
-        <PartyPopper className="h-4 w-4" />
-        <AlertTitle className="text-green-500">You have Matched!</AlertTitle>
-      </Alert>
-      </div>
+          <Alert>
+            <PartyPopper className="h-4 w-4" />
+            <AlertTitle className="text-green-500">
+              You have Matched!
+            </AlertTitle>
+          </Alert>
+        </div>
       )}
       <h1>Welcome to Seeker!</h1>
       <div className="cardContainer">
@@ -158,17 +160,22 @@ function SwipePage() {
         </div>
       </div>
       {lastDirection ? (
-        <h2 key={lastDirection} className="text-gray-800 text-md font-semibold font-sans hover:font-serif">
+        <h2
+          key={lastDirection}
+          className="text-gray-800 text-md font-semibold font-sans hover:font-serif"
+        >
           You swiped {lastDirection}
         </h2>
       ) : (
-        <Alert>
-          <Terminal className="h-4 w-4" />
-          <AlertTitle>Heads up!</AlertTitle>
-          <AlertDescription>
-            Swipe a card or press a button to get Restore Card button visible!
-          </AlertDescription>
-        </Alert>
+        <div>
+          <Alert>
+            <Terminal className="h-4 w-4" />
+            <AlertTitle>Heads up!</AlertTitle>
+            <AlertDescription>
+              Swipe a card or press a button to get Restore Card button visible!
+            </AlertDescription>
+          </Alert>
+        </div>
       )}
     </div>
   );
