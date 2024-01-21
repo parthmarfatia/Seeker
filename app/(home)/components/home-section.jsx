@@ -6,7 +6,7 @@ import {
 import { Button } from "@/components/ui/button";
 export function HomeSection() {
   return (
-    <ResizablePanelGroup direction="horizontal" className="">
+    <ResizablePanelGroup direction="horizontal">
       <ResizablePanel defaultSize={50}>
         <div className="grid grid-row-2 w-[70%] h-[350px] items-left justify-left p-6">
           <span className="font-extrabold text-6xl ">
