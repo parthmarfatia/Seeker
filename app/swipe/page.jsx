@@ -7,6 +7,8 @@ import getJobs from "@/services";
 function SwipePage() {
   const [lastDirection, setLastDirection] = useState();
   const [companies, setCompanies] = useState([]);
+  const [isMatched, setIsMatched] = useState(false);
+  const [count, setCount] = useState(0);
 
   const swiped = (direction, nameToDelete) => {
     console.log("removing: " + nameToDelete);
@@ -26,9 +28,24 @@ function SwipePage() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if (lastDirection === "right") {
+      setCount((prev) => prev + 1);
+    }
+  }, [lastDirection]);
+
+  useEffect(() => {
+    if (count === 2) {
+      setIsMatched(true);
+    }
+  }, [count]);
+
   return (
     <div id="swipe-container">
-      <h1>Seeker</h1>
+      {isMatched && (
+        <p style={{ fontSize: "40px", color: "#90EE90" }}>You have matched!</p>
+      )}
+      <h1>Welcome to Seeker!</h1>
       <div className="cardContainer">
         {companies.map((character) => (
           <TinderCard
